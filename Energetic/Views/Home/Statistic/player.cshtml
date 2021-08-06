@@ -1,0 +1,54 @@
+﻿@using Energetic.Models.Club.Players
+@model Player
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@Model.Name</title>
+    @Styles.Render("~/Content/Statistic/player.css")
+</head>
+<body>
+
+            <section class="row">
+                <section class="col-lg-12 col-sm-12 col-md-12 col-12 container">
+                    <section class="fullName">
+                        @Model.Name
+                    </section>
+                </section>
+            </section>
+
+            <section class="elements">
+                <section class="player">
+                    <section class="row">
+                        <section class=" col-lg-6 col-md-12 col-sm-12 col-12 player_photo">
+                            <img src="@Url.Content(Model.Photo)" width="700" height="700"  />
+                        </section>
+                        <section class=" col-lg-6 col-md-12 col-sm-12 col-12 player_info">
+
+                            <section class="player_info_name">
+                                <p>Номер</p>
+                                <p>Амплуа</p>
+                                <p class="birthday">Дата рождения</p>
+                                <p>Игры за клуб</p>
+                                <p>Голы</p>
+                                <p><img src="~/Images/yellow.png" height="66" width="48" /></p>
+                                <p><img src="~/Images/red.png" height="66" width="48" /></p>
+                            </section>
+
+                            <section class="player_info_value">
+                                <p> @Model.Number</p>
+                                <p> @Model.Position</p>
+                                <p> @Model.Birthday</p>
+                                <p> @Model.Playes</p>
+                                <p> @Model.Goals</p>
+                                <p class="yellow_card"> @Model.YellowCard</p>
+                                <p> @Model.RedCard</p>
+                            </section>
+                        </section>
+                    </section>
+                </section>   
+            </section>
+</body>
+</html>
+
+

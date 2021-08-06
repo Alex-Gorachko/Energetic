@@ -1,0 +1,65 @@
+﻿@using Energetic.Models.Club.History
+@model List<IGrouping<int, Turnament>>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>History</title>
+    @Styles.Render("~/Content/Club/history.css")
+
+</head>
+<body>
+
+     <section class="row">
+            <section class="col-lg-12 col-sm-12 col-md-12 col-12 container">
+                <section class="fullName">
+                    История
+                </section>
+            </section>
+        </section>
+
+
+        <section class="elements">
+
+            <!--WORKPLACE-->
+
+            <section id="years">
+
+                @foreach (var el in Model)
+                {
+                    <section class="row main_name">
+                        <section class="col-lg-12 col-sm-12 col-md-12 col-12 ">
+                            <section class="fullName">
+                                @el.Key
+                            </section>
+                        </section>
+                    </section>
+                    
+        <section class="year">
+            @foreach(Turnament el2 in el)
+            {
+            <section class="info">
+                <p>@el2.Name</p>
+                <section class="cup">
+                      <section class="cup_item_name">
+                          <p>Итоговое место</p>
+                          <p>Очки</p>
+                          <p>Разница мячей</p>
+                      </section>
+                      <section class="cup_item_value">
+                           <p>@el2.Place</p>
+                           <p>@el2.Points</p>
+                           <p>@el2.Balls</p>
+                      </section>
+                 </section>
+            </section>
+            }
+        </section>
+        }
+                }
+                </section>
+        </section>
+</body>
+</html>
+

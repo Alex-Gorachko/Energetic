@@ -1,0 +1,47 @@
+﻿@using Energetic.Models.Club.MainPhotoUsualInformations
+@model MainPhotoUsualInformation 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Club Information</title>
+    @Styles.Render("~/Content/Club/usualInformation.css")
+
+</head>
+<body>
+
+    <section class="row">
+        <section class="col-lg-12 col-sm-12 col-md-12 col-12 container">
+            <section class="fullName">
+                Общая информация
+            </section>
+        </section>
+    </section>
+
+
+    <section class="elements">
+
+        
+        <section class="row info" >
+            <section class="col-lg-12 col-sm-12 col-md-12 col-12 text">
+                <p>
+                    @Model.Value
+                </p>
+            </section>
+        </section>
+
+        
+            <section class="photo">
+                <section class="photoL">
+
+                <img width="2000px" src="@Url.Content(Model.Photo)" />
+                </section>
+            </section>
+       
+    </section>
+
+
+</body>
+</html>
+

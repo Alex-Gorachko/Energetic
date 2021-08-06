@@ -1,0 +1,71 @@
+Admin
+	string password
+	string login
+
+Partners&Contacts
+	int type
+	string name
+	string syte
+
+Cubs 
+	string name
+	int quantity
+
+Players
+	string photo
+	string surname
+	string name
+	string fathersname
+	DateTime birthday
+	int number
+	string position
+	int goals
+	int playes
+	int yellowCard
+	int redCard
+	boolean mainSquade
+
+Personal
+	string photo
+	int type
+	string surname
+	string name
+	string fathersname
+	string position
+
+Team
+	int year
+	int game
+	int win
+	int drow
+	int loose
+	string goals
+	int points
+	int place
+	string forward
+
+Stadiums
+	string photo
+	string name
+	string place
+	int people
+	string syte
+
+History
+	int year
+	string name
+	int place
+	string points
+	string balls
+
+Gallery 
+	string album
+	string photo
+
+Video
+	string name
+	string syte
+
+MainPhotos&UsualInformation
+	string value
+	string photo	

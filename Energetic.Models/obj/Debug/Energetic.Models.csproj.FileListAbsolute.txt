@@ -1,0 +1,11 @@
+D:\Energetic\Energetic.Models\bin\Debug\Energetic.Models.dll
+D:\Energetic\Energetic.Models\bin\Debug\Energetic.Models.pdb
+D:\Energetic\Energetic.Models\obj\Debug\Energetic.Models.csproj.CoreCompileInputs.cache
+D:\Energetic\Energetic.Models\obj\Debug\Energetic.Models.dll
+D:\Energetic\Energetic.Models\obj\Debug\Energetic.Models.pdb
+C:\Users\bbaat\Desktop\Energetic\Energetic.Models\bin\Debug\Energetic.Models.dll
+C:\Users\bbaat\Desktop\Energetic\Energetic.Models\bin\Debug\Energetic.Models.pdb
+C:\Users\bbaat\Desktop\Energetic\Energetic.Models\obj\Debug\Energetic.Models.csproj.CoreCompileInputs.cache
+C:\Users\bbaat\Desktop\Energetic\Energetic.Models\obj\Debug\Energetic.Models.dll
+C:\Users\bbaat\Desktop\Energetic\Energetic.Models\obj\Debug\Energetic.Models.pdb
+C:\Users\bbaat\Desktop\Energetic\Energetic.Models\obj\Debug\Energetic.Models.csprojAssemblyReference.cache

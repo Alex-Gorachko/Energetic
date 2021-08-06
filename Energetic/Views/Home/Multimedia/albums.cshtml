@@ -1,0 +1,45 @@
+﻿~@using Energetic.Models.Club.Gallery
+@model List<Album>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Albums</title>
+    @Styles.Render("~/Content/Multimedia/albums.css")
+
+</head>
+<body>
+
+    <section class="row">
+        <section class="col-lg-2 col-sm-2 col-md-2 col-2 container">
+            <section class="fullName">
+                Альбомы
+            </section>
+        </section>
+    </section>
+
+
+    <section class="elements">
+        <section id="albums">
+
+            @foreach (Album el in Model){
+
+            <section class="album">
+                    <section class="name">@el.Name</section>
+
+                    <img class="img" src="@Url.Content(el.Photo)" title="альбом" />
+                    <section class="hidden">
+                        <section class="hidden_item">
+                            @Html.ActionLink("Открыть альбом", "album", new { id = el.Id })
+                        </section>
+                    </section>
+            </section>
+
+            }
+        </section>
+    </section>
+
+</body>
+</html>
+

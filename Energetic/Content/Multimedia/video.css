@@ -1,0 +1,73 @@
+
+
+
+
+/*----------FUULNAME-------------*/
+
+.container{
+    position:absolute;
+    margin-top: 150px;
+    padding:30px;
+    width: 100%;
+}
+.fullName{
+    font-size: 3.0em;
+    color: #14056C;
+    text-align:center;
+    font-weight: bold;
+}
+
+
+/*----------LISTCONTENT-------------*/
+.elements{
+    width: 100%;
+    margin-top: 300px ;
+}
+
+/*----------WORKPLACE-------------*/
+#video_youtube{
+    width:100%;
+    margin-bottom:3em;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+}
+.video_youtube-header{
+    margin-bottom:1.2em;
+    margin-left:2em;
+    justify-content: center;
+
+}
+
+.video_youtube-item{
+    margin-left:4em;
+    margin-right:2em;
+    margin-bottom:4em;
+    width:500px;
+}
+.video_youtube-header{
+    justify-content: center;
+    flex-wrap:wrap;
+
+}
+.video_youtube-header p{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom:-0.3em;
+    color: #14056C;
+}
+.teams {
+    position: center;
+    text-align: center;
+}
+.score{
+    position: center;
+    text-align: center;
+}
+.tour{
+    position: center;
+    text-align: center;
+}
+

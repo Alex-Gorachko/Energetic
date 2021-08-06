@@ -1,0 +1,50 @@
+﻿@using Energetic.Models.Club.Contacts
+@model List<Contact>
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    @Styles.Render("~/Content/footer.css")
+
+</head>
+<body>
+    <footer id="footer">
+        <section class="row">
+            <section class="col-lg-3 col-sm-3 col-md-3 col-3 url ">
+                <a href="@Url.Content("https://vk.com/energetik_bgatu")" target="_blank">
+                    <img src="~/Images/Group 1.png" id="vk">
+                    <p class="name_1"> Энергетик</p>
+                </a>
+            </section>
+
+            <section class="col-lg-6 col-sm-6 col-md-6 col-6 partners">
+                <section class="row">
+                    @foreach (Contact el in Model)
+                    {
+                    <section class="col-lg-6 col-sm-6 col-md-6 col-6 url ">
+                        <a target="_blank" href="@Url.Content(el.Value)">@el.Name</a>
+                    </section>
+                    }
+                </section>
+
+            </section>
+            <section class="col-lg-3 col-sm-3 col-md-3 col-3 url ">
+                <a href="@Url.Content("https://www.youtube.com/channel/UCHECwy6-YBefljFDZ_IkEHQ")" target="_blank">
+                    <img src="~/Images/Group 2.png" id="youtube">
+                    <p class="name_1"> Энергетик</p>
+                </a>
+            </section>
+
+        </section>
+    </footer>
+</body>
+</html>
+
+
+

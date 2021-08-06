@@ -1,0 +1,69 @@
+﻿@using Energetic.Models.Club.Team
+@model List<Team>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Team statistic</title>
+    @Styles.Render("~/Content/Statistic/team.css")
+
+</head>
+<body>
+
+    <section class="row">
+        <section class="col-lg-12 col-sm-12 col-md-12 col-12 container">
+            <section class="fullName">
+                Команда
+            </section>
+        </section>
+    </section>
+
+
+
+    <section class="elements">
+
+        <!--WORKPLACE-->
+
+        <section class="element">
+            <section class="row">
+                <section class="col-lg-1 col-sm-1 col-md-1 col-1 year">ГОД</section>
+                <section class="col-lg-1 col-sm-1 col-md-1 col-1 play">И</section>
+                <section class="col-lg-1 col-sm-1 col-md-1 col-1 win">В</section>
+                <section class="col-lg-1 col-sm-1 col-md-1 col-1 draw">Н</section>
+                <section class="col-lg-1 col-sm-1 col-md-1 col-1 loss">П</section>
+                <section class="col-lg-2 col-sm-2 col-md-2 col-2 goals">ЗМ-ПМ</section>
+                <section class="col-lg-1 col-sm-1 col-md-1 col-1 points">O</section>
+                <section class="col-lg-1 col-sm-1 col-md-1 col-1 position">М</section>
+                <section class="col-lg-3 col-sm-3 col-md-3 col-3 forward">Бомбардир</section>
+            </section>
+        </section>
+
+
+        @foreach (Team el in Model)
+        {
+        <section class="element">
+            <section class="row">
+                <section class="col-lg-1 col-sm-1 col-md-1 col-1 year">@el.Year</section>
+                <section class="col-lg-1 col-sm-1 col-md-1 col-1 play">@el.Game</section>
+                <section class="col-lg-1 col-sm-1 col-md-1 col-1 win">@el.Win</section>
+                <section class="col-lg-1 col-sm-1 col-md-1 col-1 draw">@el.Drow</section>
+                <section class="col-lg-1 col-sm-1 col-md-1 col-1 loss">@el.Loose</section>
+                <section class="col-lg-2 col-sm-2 col-md-2 col-2 goals">@el.Goals</section>
+                <section class="col-lg-1 col-sm-1 col-md-1 col-1 points">@el.Points</section>
+                <section class="col-lg-1 col-sm-1 col-md-1 col-1 position">@el.Place</section>
+                <section class="col-lg-3 col-sm-3 col-md-3 col-3 forward">@el.Forward</section>
+            </section>
+        </section>
+        }
+
+
+        <!--END OF WORKPLACE-->
+
+
+    </section>
+
+
+</body>
+</html>
+

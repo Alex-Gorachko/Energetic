@@ -1,0 +1,39 @@
+
+
+/*----------FUULNAME-------------*/
+
+.container {
+    position: absolute;
+    margin-top: 150px;
+    width: 100%;
+    padding: 30px;
+}
+
+.fullName {
+    font-size: 3.0em;
+    color: #0E0354;
+    text-align: center;
+}
+
+/*----------LISTCONTENT-------------*/
+.elements{
+    width: 100%;
+    margin-top: 300px ;
+    padding: 0px 0px 60px 0px ; 
+}
+
+/*----------WORKPLACE-------------*/
+.element {
+    padding: 30px 20px;
+    width: 100%;
+    color: #0E0354;
+    font-weight:bolder;
+    text-align: center;
+    font-size: 1.7em;
+}
+
+.url{
+    padding: 20px;
+}
+
+

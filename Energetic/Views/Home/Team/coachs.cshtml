@@ -1,0 +1,53 @@
+﻿@using Energetic.Models.Club.Personal
+@model List<Personal>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Coachs</title>
+    @Styles.Render("~/Content/Team/coachs.css")
+
+</head>
+<body>
+
+    <section class="row">
+        <section class="col-lg-12 col-sm-12 col-md-12 col-12 container">
+            <section class="fullName">
+                Тренерский штаб
+            </section>
+        </section>
+    </section>
+
+
+    <section class="elements">
+
+        <!--WORKPLACE-->
+        <section class="players">
+            @foreach(Personal el in Model) { 
+            <section class="person">
+                <img class="img" src="@Url.Content(el.Photo)">
+                <section class="informations">
+
+                    <section class="information">
+                        <section class="Name">Должность</section>
+                        <section class="Value"> @el.Position</section>
+                    </section>
+
+                    <section class="information">
+                        <section class="Name">Имя </section>
+                        <section class="Value">@el.Name</section>
+                    </section>
+
+                </section>
+            </section>
+            }
+
+        </section>
+        <!--END OF WORKPLACE-->
+    </section>
+
+
+</body>
+</html>
+

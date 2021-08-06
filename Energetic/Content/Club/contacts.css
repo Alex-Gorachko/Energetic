@@ -1,0 +1,68 @@
+
+
+
+/*----------FUULNAME-------------*/
+
+.container {
+    position: absolute;
+    margin-top: 150px;
+    width: 100%;
+    padding: 30px;
+}
+
+.fullName {
+    font-size: 3.0em;
+    color: #0E0354;
+    text-align: center;
+}
+
+
+
+/*----------LISTCONTENT-------------*/
+.elements{
+    width: 100%;
+    margin-top: 300px ;
+}
+
+
+/*----------WORKPLACE-------------*/
+
+
+.url {
+    padding: 20px;
+}
+
+#contacts {
+    font-family: Roboto;
+    width: 100%;
+    height: auto;
+    margin: 6em 0em;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5em;
+    margin-left:3em;
+}
+
+    .text h3 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2em;
+        color: #0E0354;
+        align-items: center;
+        margin-left: 60px;
+    }
+
+    .text p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.5em;
+        color: #0E0354;
+        align-items: center;
+    }
+
+
+
+

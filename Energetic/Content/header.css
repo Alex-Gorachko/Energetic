@@ -1,0 +1,124 @@
+﻿
+
+
+/*---------DOCUMENT--------------*/
+body.html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    margin: 0;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.menu_link a  {
+    text-decoration: none;
+}
+/*----------------------*/
+#content {
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+.logo {
+margin-bottom: 10px;
+}
+
+a {
+    color: #FFFFFF !important;
+    font-size: 1.4em;
+    transition: ease 10ms;
+    cursor: pointer;
+}
+
+
+.menu_link a:hover {
+    color: #FFFFFF !important;
+
+    color: white;
+    font-size: 1.6em;
+    transition: ease 10ms;
+    cursor: pointer;
+}
+
+.menu_link a:active {
+    color: #FFFFFF !important;
+    color: white;
+    transition: ease 10ms;
+    font-size: 1.6em;
+    cursor: pointer;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    height: 130px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+    z-index: 3;
+    background: #0E0354;
+    border-bottom: #EBEEFF solid 0.3em;
+}
+
+.menu {
+    padding-top: 2.4em;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2em;
+    align-items: center;
+    text-align: center;
+    color: #EDEBEB;
+}
+
+.menu_header {
+    font-size: 1.5em;
+    font-style: normal;
+    padding-bottom: 1.25em;
+    color: #EDEBEB;
+    font-weight: normal;
+}
+
+.menu_item {
+    
+    border: #EBEEFF solid 0.3em;
+    border-top: none !important;
+    z-index: 1000;
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    background: #0E0354;
+}
+
+.menu_link {
+    text-decoration: none !important;
+    padding-bottom: 1.0em;
+    color: #FFFFFF !important;
+    width: 100%;
+}
+
+    .menu_link span {
+        font-size: 1.2em;
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+
+#b_exit {
+    margin: 40px 0px 0px 50px;
+    cursor: pointer;
+    width:50px;
+    height:50px;
+}
+
+/*------FOOTER----------*/
+

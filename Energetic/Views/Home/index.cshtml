@@ -1,0 +1,132 @@
+﻿@using Energetic.Models.Club.Index
+@model Index
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Енергетик-БГАТУ</title>
+    
+    @Styles.Render("~/Content/index.css")
+
+</head>
+
+<body>
+
+        <section class="row">
+            <section class="col-lg-12 col-sm-12 col-md-12 col-12 container">
+                <section class="fullName">
+                    ФК ЭНЕРГЕТИК-БГАТУ
+                </section>
+            </section>
+        </section>
+
+        <section class="elements">
+
+            <section class="main_photo_item">
+                <img class="img" src="@Url.Content(Model.Photo.Photo)" max-height="700" max-width="1400" />
+            </section>
+            <section class="row matches_main">
+
+                <section class="col-12 col-md-12 col-sm-12 col-lg-6 matches" id="first_match">
+                    <section class="matches_header"> <p>Прошлый матч</p></section>
+                    <section class="matches-item">
+                        <p class="tour">тур 10</p>
+                        <div class="teams">
+                            <p class="first_team">Энергетик</p>
+                            <p class="second_team">Виктория</p>
+                        </div>
+                        <p class="score">4:2</p>
+                        <p class="date">03.07.2021</p>
+                        <p class="city">Минск</p>
+
+                    </section>
+                </section>
+                <section class="col-12 col-md-12 col-sm-12 col-lg-6 matches" id="second_match">
+                    <section class="matches_header"><p>Следующий матч</p></section>
+                    <section class="matches-item">
+                        <p class="tour">тур 11</p>
+                        <div class="teams">
+                            <p class="first_team">Энергетик</p>
+                            <p class="second_team">Спартак</p>
+                        </div>
+                        <p class="score">VS</p>
+                        <p class="date">11.07.2021</p>
+                        <p class="city">Минск</p>
+
+                    </section>
+
+                </section>
+            </section>
+            <section class="row trophies">
+
+                @foreach (var el in Model.Cubs)
+                {
+                    <section class="col-4 col-lg-4 col-4 col-sm-4 col-md-4 trophy">
+                        <section class="trophy_img">
+                            <img src="~/Images/кубок 4.png" max-height="200" max-width="208" />
+                        </section>
+                        <section class="trophy_section">
+                            <div class="name">@el.Name</div>
+                            <div class="number">@el.Quantity</div>
+                        </section>
+                    </section>
+                }
+
+
+            </section>
+
+
+            <section class="row">
+                <section class="col-lg-12 col-sm-12 col-md-12 col-12 container">
+                    <section class="tournament_table_header">
+                        <p>Турнирная таблица</p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="table">
+
+                <section class="element">
+                    <section class="row">
+                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 "></section>
+                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 "></section>
+                        <section class="col-lg-2 col-sm-2 col-md-2 col-2 "></section>
+                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">И</section>
+                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">В</section>
+                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">Н</section>
+                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">П</section>
+                        <section class="col-lg-2 col-sm-2 col-md-2 col-2 ">М</section>
+                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">О</section>
+                    </section>
+                </section>
+
+                @for (int i = 0; i < 10; i++)
+                {
+                <section class="element">
+                    <section class="row">
+                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 "></section>
+                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">1</section>
+                        <section class="col-lg-2 col-sm-2 col-md-2 col-2 ">Энергетик</section>
+                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">11</section>
+                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">13</section>
+                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">3</section>
+                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">8</section>
+                        <section class="col-lg-2 col-sm-2 col-md-2 col-2 ">13-19</section>
+                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">13</section>
+                    </section>
+                </section>
+                }
+
+
+            </section>
+
+        </section>
+        <!--END OF WORKPLACE-->
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+﻿@using Energetic.Models.Club.Players
+@model ActiveTeam
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Main Players</title>
+    @Styles.Render("~/Content/Team/mainPlayers.css")
+
+</head>
+<body>
+
+    <section class="row">
+        <section class="col-lg-12 col-sm-12 col-md-12 col-12 container">
+            <section class="fullName">
+                Основной состав
+            </section>
+        </section>
+    </section>
+    <section class="elements">
+
+        <!--WORKPLACE-->
+        <section class="row">
+            <section class="type">
+                Вратарь
+            </section>
+        </section>
+
+        <section class="peoples">
+            @foreach (Player el in Model.Goalkeepers)
+            {
+                <section class="person">
+                    <section class="col-lg-6 col-sm-6 col-md-6 col-6 image">
+
+                        <img class="img" src="@Url.Content(el.Photo)" />
+                        
+                        <section class="hidden">
+                            <section class="hidden_item">
+                                @Html.ActionLink("Подробнее", "Player", new { id = el.Id })
+                            </section>
+                        </section>
+
+                    </section>
+
+                    <section class="number">
+                        @el.Number
+                    </section>
+                    <section class="Name">
+                        @el.Name
+                    </section>
+                </section>
+            }
+
+
+            
+
+        </section>
+
+        <section class="row">
+            <section class="type">
+                Защитники
+            </section>
+        </section>
+
+
+        <section class="peoples">
+            @foreach (Player el in Model.Defenders)
+            {
+            <section class="person">
+                <section class="col-lg-6 col-sm-6 col-md-6 col-6 image">
+
+                    <img class="img" src="@Url.Content(el.Photo)" />
+
+                    <section class="hidden">
+                        <section class="hidden_item">
+                            @Html.ActionLink("Подробнее", "Player", new { id = el.Id })
+                        </section>
+                    </section>
+
+                </section>
+
+                <section class="number">
+                    @el.Number
+                </section>
+                <section class="Name">
+                    @el.Name
+                </section>
+            </section>
+            }
+
+        </section>
+
+        <section class="row">
+            <section class="type">
+               Полузащитники
+            </section>
+        </section>
+
+
+        <section class="peoples">
+            @foreach (Player el in Model.Midfielders)
+            {
+            <section class="person">
+                <section class="col-lg-6 col-sm-6 col-md-6 col-6 image">
+
+                    <img class="img" src="@Url.Content(el.Photo)" />
+
+                    <section class="hidden">
+                        <section class="hidden_item">
+                            @Html.ActionLink("Подробнее", "Player", new { id = el.Id })
+                        </section>
+                    </section>
+
+                </section>
+
+                <section class="number">
+                    @el.Number
+                </section>
+                <section class="Name">
+                    @el.Name
+                </section>
+            </section>
+            }
+
+        </section>
+
+        <section class="row">
+            <section class="type">
+                Нападающие
+            </section>
+        </section>
+
+
+        <section class="peoples">
+            @foreach (Player el in Model.Forwards)
+            {
+            <section class="person">
+                <section class="col-lg-6 col-sm-6 col-md-6 col-6 image">
+
+                    <img class="img" src="@Url.Content(el.Photo)" />
+
+                    <section class="hidden">
+                        <section class="hidden_item">
+                            @Html.ActionLink("Подробнее", "Player", new { id = el.Id })
+                        </section>
+                    </section>
+
+                </section>
+
+                <section class="number">
+                    @el.Number
+                </section>
+                <section class="Name">
+                    @el.Name
+                </section>
+            </section>
+            }
+
+        </section>
+
+
+        <!--END OF WORKPLACE-->
+    </section>
+
+
+</body>
+</html>
+

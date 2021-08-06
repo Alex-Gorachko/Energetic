@@ -1,0 +1,46 @@
+﻿@using Energetic.Models.Club.Video
+@model List<Video>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Videos</title>
+    @Styles.Render("~/Content/Multimedia/video.css")
+
+</head>
+<body>
+
+    <section class="row">
+        <section class="col-lg-2 col-sm-2 col-md-2 col-2 container">
+            <section class="fullName">
+                Видео
+            </section>
+        </section>
+    </section>
+
+
+    <!--WORKPLACE-->
+    <section class="elements">
+
+        <section id="video_youtube">
+            @foreach (Video el in Model)
+            {
+            <section class="video_youtube-item">
+                <section class="video_youtube-header">
+                    <p class="tour">@el.Name</p>
+                </section>
+                <section class="video_youtube-content">
+                    <iframe width="500" height="300" src="@Url.Content(el.Link)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </section>                             
+            </section>
+            }
+        </section>
+
+    </section>
+    
+ 
+
+</body>
+</html>
+

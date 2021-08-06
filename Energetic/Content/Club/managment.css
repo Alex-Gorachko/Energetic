@@ -1,0 +1,83 @@
+
+
+
+
+/*----------FUULNAME-------------*/
+
+.container {
+    position: absolute;
+    margin-top: 150px;
+    width: 100%;
+    padding: 30px;
+}
+
+.fullName {
+    font-size: 3.0em;
+    color: #0E0354;
+    text-align: center;
+}
+
+
+/*----------LISTCONTENT-------------*/
+.elements {
+    width: 100%;
+    margin-top: 500px;
+}
+
+
+
+.item {
+    margin-bottom: 4em;
+   
+}
+
+    .item_name {
+        height:90px;
+        flex-wrap: wrap;
+        font-family: Roboto;
+        font-style: normal;      
+        font-size: 2.0em;
+        color: #0E0354;
+        text-align:center;
+        justify-content:center;
+    }
+
+    .item_header {
+        height:90px;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-size: 2.0em;
+        text-align:center;
+        height: 90px;
+        color: #0E0354;
+    }
+
+.image {
+    width:500px;
+    height:auto;
+    position:relative;
+    justify-content:center;
+    text-align:center;
+}
+
+.image img {
+    position:relative;
+    width:200px;
+    margin-top:1.7em;
+    margin-bottom: 1.3em;
+}
+/*----------WORKPLACE-------------*/
+
+.element {
+    padding: 20px 20px;
+    width: 100%;
+    color: #14056C;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.url {
+    padding: 20px;
+}

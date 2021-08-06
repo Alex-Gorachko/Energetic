@@ -1,0 +1,119 @@
+﻿
+
+
+/*----------FUULNAME-------------*/
+
+.container {
+    position: absolute;
+    margin-top: 150px;
+    width: 100%;
+    padding: 30px;
+}
+
+.fullName {
+    font-size: 3.0em;
+    color: #14056C;
+    text-align: center;
+}
+
+
+/*----------LISTCONTENT-------------*/
+.elements {
+    width: 100%;
+    margin-top: 300px;
+}
+
+
+/*----------WORKPLACE-------------*/
+
+.player {
+    width: 100%;
+    height: auto;
+    padding-left: 3em;
+    margin-bottom: 3em;
+}
+
+.player_photo {
+    
+    margin-bottom: 7em;
+    justify-content: center;
+    justify-items: center;
+    width: 400px;
+    height: 850px;
+    margin-left:5em;
+    margin-right: 20em;
+}
+
+    . player_photo img {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%,-50%,0);
+        
+    }
+
+.player_info {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5em;
+    float: right;
+}
+
+.birthday {
+    /* font-size:1.5em !important;*/
+}
+
+.player_info_name {
+    margin-right: 3.3em;
+}
+
+    .player_info_name p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2.2em;
+        align-items: center;
+        color: #14056C;
+        margin-bottom: 1.2em;
+    }
+
+.player_info_value p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.2em;
+    align-items: center;
+    color: #14056C;
+    margin-bottom: 1.2em;
+}
+
+.yellow_card {
+    margin-bottom: 2.0em !important;
+}
+
+player_info_value img {
+    align-items: center;
+    color: #14056C;
+    margin-bottom: 1.5em;
+}
+
+@media(max-width:1052px ) {
+    .player {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 3em;
+    }
+
+    player_photo {
+        position: relative;
+        overflow: hidden;
+        left: 50% !important;
+        margin-left: -30% !important;
+        margin-bottom: 3em;
+        /* width:500px;
+         height:740px;
+     */
+    }
+}

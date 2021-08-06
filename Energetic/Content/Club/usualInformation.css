@@ -1,0 +1,65 @@
+
+
+/*----------FUULNAME-------------*/
+
+.container{
+    position:absolute;
+    margin-top: 150px;
+    width: 100%;
+    padding: 30px;
+}
+.fullName {
+    font-size: 3.0em;
+    color: #0E0354;
+    text-align: center;
+}
+
+
+/*----------LISTCONTENT-------------*/
+.elements {
+   
+    width: 100%;
+    margin-top: 300px;
+   margin-bottom:20px;
+}
+
+
+/*----------WORKPLACE-------------*/
+
+.info {
+    justify-content: center;
+    align-items: center;
+    padding: 0px 150px;
+}
+
+.text p {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 2.2em;
+    padding: 0px 50px;
+    color: #0E0354;
+    font-weight:bolder;
+    
+}
+.text{
+    position:relative;
+    width:100%;
+    height: auto;
+
+}
+
+.photo {
+    position:relative;
+
+    width:100%;
+}
+
+
+
+.photoL {
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    left: 50%;
+    margin-left: -1000px;
+}

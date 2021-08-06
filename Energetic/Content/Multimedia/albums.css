@@ -1,0 +1,100 @@
+
+/*----------FUULNAME-------------*/
+
+.container{
+    position:absolute;
+    margin-top: 150px;
+    padding:30px;
+    width: 100%;
+}
+.fullName{
+    font-size: 3.0em;
+    color: #14056C;
+    text-align:center;
+    font-weight: bold;
+}
+
+
+/*----------LISTCONTENT-------------*/
+.elements{
+    width: 100%;
+    margin-top: 300px ;
+}
+/*----------WORKPLACE-------------*/
+#albums{
+    display: flex;
+    flex-wrap: wrap;
+}
+.album{
+    position: relative;
+    overflow:hidden;
+    width:565px;
+    height:468px;
+    margin-left:2em;
+    margin-right:2em;
+    margin-bottom:4em;
+}
+.name {
+    font-size: 2.0em;
+    padding-bottom:100px;
+    color: #14056C;
+    text-align: center;
+    font-weight: bold;
+}
+.img {
+    
+    position: relative;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    height:645px;
+
+}
+.hidden {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+    height: 360px;
+}
+
+.hidden_item {
+    position: relative;
+    width: 289px;
+    height: 107px;
+    border: 4px solid #FFFFFF;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    display: none;
+    z-index: 3;
+    box-sizing: border-box;
+    padding-top: 28px;
+}
+
+    .hidden_item p {
+        font-style: normal;
+        font-weight: normal;
+        text-align: center;
+        margin-top: 1.5em;
+        color: #FFFFFF;
+    }
+
+.album:hover .hidden_item {
+    display: block;
+    font-size: 20px;
+}
+
+    .album:hover .hidden_item:hover {
+        display: block;
+        font-size: 22px;
+    }
+
+.album:hover .hidden {
+    background-color: rgba(0,0,0,.5);
+}

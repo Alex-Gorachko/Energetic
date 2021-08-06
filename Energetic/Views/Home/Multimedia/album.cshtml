@@ -1,0 +1,38 @@
+﻿@using Energetic.Models.Club.Gallery
+@model Album
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Album</title>
+    @Styles.Render("~/Content/Multimedia/album.css")
+
+</head>
+<body>
+
+    <section class="row">
+        <section class="col-lg-2 col-sm-2 col-md-2 col-2 container">
+            <section class="fullName">
+                @Model.Name
+            </section>
+        </section>
+    </section>
+
+
+    <section class="elements">
+        <section id="albums">
+
+          @foreach (var photo in Model.Photos)
+          {
+            <section class="album">     
+                    <img class="img" src="@Url.Content(photo.Url)" title="альбом" />
+            </section>
+
+          }
+        </section>
+    </section>
+
+</body>
+</html>
+

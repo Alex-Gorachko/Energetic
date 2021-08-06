@@ -1,0 +1,78 @@
+
+
+
+/*----------FUULNAME-------------*/
+
+.container {
+    position: absolute;
+    margin-top: 150px;
+    padding: 30px;
+    width: 100%;
+}
+
+.fullName {
+    font-size: 3.0em;
+    color: #0E0354;
+    text-align: center;
+    
+}
+
+
+/*----------LISTCONTENT-------------*/
+.elements {
+    width: 100%;
+    margin-top: 300px;
+}
+
+
+/*----------WORKPLACE-------------*/
+#years {
+    position: relative;
+    width: 100%;
+    
+}
+
+.main_name {
+    margin-bottom: 1em;
+    color: #0E0354;
+}
+
+.year {
+    margin-bottom: 1em;
+    padding: 15px 15px 15px 150px;
+    margin-top: 3em;
+    padding-top: 0px !important;
+    width: 100%;
+}
+
+    .year p {
+        margin-bottom: 1.0em;
+        position: center;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        color: #14056C;
+    }
+
+.cup {
+    display: flex;
+}
+
+.cup_item_name {
+    margin-right: 13.0em;
+}
+
+    .cup_item_name p,
+    .cup_item_value p {
+        margin-bottom: 0.5em;
+        margin-left: 2em;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: normal;
+        color: #14056C;
+    }
+
+.info {
+    margin-bottom: 2em;
+    margin-left: 3em;
+}

@@ -1,0 +1,55 @@
+﻿a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    background-color: #E5E5E5;
+    margin: 0;
+}
+
+#footer {
+    float: inline-end;
+    flex: 0 0 auto;
+    width: 100%;
+    background: #0E0354;
+    text-align: center;
+    padding-top: 2.0em;
+    content: "";
+}
+
+#vk {
+width:130px;
+}
+#youtube {
+    width: 130px;
+}
+
+#vk:hover {
+    cursor: pointer;
+}
+
+#youtube:hover {
+    cursor: pointer;
+}
+
+.partners {
+    
+    font-size: 1.5em;
+    color: #FFFFFF;
+}
+
+.name_1 {
+    
+    font-size: 0.83em;
+    align-items: center;
+    text-align: center;
+    padding: 0px 0px;
+    color: #FFFFFF;
+}
+
+.url {
+    margin-bottom: 1.0em;
+   
+}

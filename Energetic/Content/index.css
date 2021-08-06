@@ -1,0 +1,258 @@
+﻿
+/*---------DOCUMENT--------------*/
+body.html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    background: #EBEEFF;
+    margin: 0;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+/*----------FUULNAME-------------*/
+.container {
+    position: relative;
+    margin-top: 140px;
+    width: 100%;
+    padding: 30px;
+}
+
+.fullName {
+    font-size: 3.0em;
+    color: #0E0354;
+    text-align: center;
+}
+
+
+/*----------WORKPLACE-------------*/
+.elements {
+    padding: 10px 0px;
+    margin: 0px 0px;
+    width: 100%;
+    color: #14056C;
+    font-size: 1.5em;
+}
+
+.url {
+    padding: 20px;
+}
+
+.main_photo_item {
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+    
+    margin-bottom: 4em;
+    justify-content: center;
+}
+
+.img {
+    position: relative;
+    height: 700px;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+}
+
+.matches_main {
+    position: relative;
+    margin-bottom: 3em;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    top: 1.0em;
+    width: 100%;
+    height: auto;
+    margin-left: 10px;
+}
+
+.matches {
+    
+    position: relative;
+    justify-content: center;
+}
+
+    .matches h1 {
+        margin-left: 3.7em;
+    }
+
+.matches_header {
+    justify-content: center;
+    align-items: center;
+}
+
+    .matches_header p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.5em;
+        align-items: center;
+        text-align: center;
+        color: #0E0354;
+    }
+
+
+.matches-item {
+    font-style: normal;
+    font-weight: normal;
+    background: #0E0354;
+    color: #14056C;
+}
+
+#second_match {
+}
+
+#first_match {
+}
+
+
+
+.tour {
+    position: relative;
+    padding-left: 1.0em;
+    padding-top: 1.0em;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2em;
+    color: #EDEBEB;
+}
+
+.teams {
+    position: relative;
+    justify-content: center;
+    padding-top: 1.5em;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #EDEBEB;
+}
+
+.first_team {
+    margin-right: 5.5em;
+}
+
+.second_team {
+}
+
+.score {
+    position: relative;
+    margin-left: 0.5em;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.0em;
+    align-items: center;
+    text-align: center;
+    color: #EDEBEB;
+}
+
+.date {
+    position: relative;
+    margin-left: 0.6em;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3em;
+    color: #EDEBEB;
+}
+
+.city {
+    position: relative;
+    margin-left: 0.7em;
+    padding-bottom: 10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3em;
+    color: #EDEBEB;
+}
+
+
+
+.trophies {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    top: 6.0em;
+    margin-bottom: 10em;
+    background: #0E0354;
+}
+
+.trophy {
+    display: flex;
+    margin-bottom:2.0em;
+}
+
+.trophy_section {
+    position: relative;
+    top: 2.5em;
+    
+}
+
+.name {
+    position: relative;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5em;
+    color: #FFFFFF;
+    height:100px;
+}
+
+.number {
+    position: relative;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.6em;
+    color: #FFFFFF;
+}
+
+.row {
+    margin-right: 0 !important;
+}
+
+
+
+
+
+.tournament_table_header p {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    align-items: center;
+    text-align: center;
+    color: #0E0354;
+}
+
+
+.table {
+    padding:1.5em 1.0em;
+    background: #0E0354;
+    color:#FFFFFF;
+    text-align:center;
+    font-size:1.5em;
+    margin-bottom:3.0em;
+}
+
+.element {
+    margin-top:1em;
+}
+

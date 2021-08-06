@@ -1,0 +1,63 @@
+﻿@using Energetic.Models.Club.Stadium
+@model List<Stadium>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Stadium</title>
+    @Styles.Render("~/Content/Club/stadiums.css")
+
+</head>
+<body>
+
+    <section class="row">
+        <section class="col-lg-12 col-sm-12 col-md-12 col-12 container">
+            <section class="fullName">
+                Стадионы
+            </section>
+        </section>
+    </section>
+
+
+    <section class="elements">
+        <section id="stadiums">
+            @foreach (Stadium el in Model)
+            {
+            <section class="row">
+                <section class="stadium">
+
+                    <section class="col-lg-6 col-sm-6 col-md-6 col-6 text">
+                        <p>Название: @el.Name</p>
+
+                        <p> Местоположение: @el.Place</p>
+
+                        <p>Вместимость: @el.People</p>
+                    </section>
+
+                    <section class="col-lg-6 col-sm-6 col-md-6 col-6 image">
+                        <a href="@Url.Content(el.Place)" target="_blank">
+                            <img class="img" src="@Url.Content(el.Photo)" />
+                            <section class="hidden">
+                                <section class="hidden_item">
+                                    <p>Показать на карте</p>
+                                </section>
+
+                            </section>
+                        </a>
+                    </section>
+
+                </section>
+            </section>
+                    }
+
+                </section>
+            </section>
+
+    <!--END OF WORKPLACE-->
+
+
+</body>
+</html>
+
