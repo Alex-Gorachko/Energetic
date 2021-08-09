@@ -28,12 +28,15 @@
             <section class="album">
                     <section class="name">@el.Name</section>
 
-                    <img class="img" src="@Url.Content(el.Photo)" title="альбом" />
-                    <section class="hidden">
-                        <section class="hidden_item">
-                            @Html.ActionLink("Открыть альбом", "album", new { id = el.Id })
+                    <section class="image">
+                        <img class="img" src="@Url.Content(el.Photo)" title="альбом" />
+                        <section class="hidden">
+                            <section class="hidden_item">
+                                @Html.ActionLink("Открыть альбом", "album", new { id = el.Id })
+                            </section>
                         </section>
                     </section>
+                    
             </section>
 
             }

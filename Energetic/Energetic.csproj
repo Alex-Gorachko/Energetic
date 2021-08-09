@@ -194,6 +194,7 @@
     <Content Include="Images\команда.png" />
     <Content Include="Images\кубок 4.png" />
     <Content Include="Scripts\Head.js" />
+    <Content Include="Scripts\Index.js" />
     <Content Include="Scripts\nugetexample.js" />
     <Content Include="Views\Home\Club\managment.cshtml" />
     <Content Include="Views\Home\Club\usualInformation.cshtml" />

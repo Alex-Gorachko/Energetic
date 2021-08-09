@@ -26,7 +26,9 @@
         <section class="players">
             @foreach(Personal el in Model) { 
             <section class="person">
-                <img class="img" src="@Url.Content(el.Photo)">
+                <section class="image">
+                    <img class="img" src="@Url.Content(el.Photo)">
+                </section>
                 <section class="informations">
 
                     <section class="information">

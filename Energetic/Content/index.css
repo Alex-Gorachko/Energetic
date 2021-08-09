@@ -55,9 +55,13 @@ a {
 
 .main_photo_item {
     position: relative;
-    height: 700px;
+    height: 1000px;
     overflow: hidden;
-    
+    background-image: url("../Images/Фон.png");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    background-size: cover;
     margin-bottom: 4em;
     justify-content: center;
 }
@@ -112,8 +116,18 @@ a {
     font-style: normal;
     font-weight: normal;
     background: #0E0354;
-    color: #14056C;
+    color: #EDEBEB;
 }
+
+
+    .matches-item:hover {
+        font-style: normal;
+        font-weight: normal;
+        background: #0B0340;
+        color: #EDEBEB;
+        
+    }
+
 
 #second_match {
 }
@@ -130,7 +144,7 @@ a {
     font-style: normal;
     font-weight: normal;
     font-size: 1.2em;
-    color: #EDEBEB;
+    
 }
 
 .teams {
@@ -143,13 +157,15 @@ a {
     display: flex;
     align-items: center;
     text-align: center;
-    color: #EDEBEB;
+    
 }
 
 .first_team {
     margin-right: 5.5em;
 }
 
+
+ 
 .second_team {
 }
 
@@ -161,7 +177,7 @@ a {
     font-size: 2.0em;
     align-items: center;
     text-align: center;
-    color: #EDEBEB;
+    
 }
 
 .date {
@@ -170,7 +186,7 @@ a {
     font-style: normal;
     font-weight: normal;
     font-size: 1.3em;
-    color: #EDEBEB;
+   
 }
 
 .city {
@@ -180,7 +196,7 @@ a {
     font-style: normal;
     font-weight: normal;
     font-size: 1.3em;
-    color: #EDEBEB;
+    
 }
 
 
@@ -196,6 +212,18 @@ a {
     margin-bottom: 10em;
     background: #0E0354;
 }
+
+    .trophies:hover {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-bottom: 1em;
+        padding-top: 1em;
+        top: 6.0em;
+        margin-bottom: 10em;
+        background: #0B0340;
+    }
 
 .trophy {
     display: flex;
@@ -252,7 +280,16 @@ a {
     margin-bottom:3.0em;
 }
 
+    .table:hover {
+        padding: 1.5em 1.0em;
+        background: #0B0340;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 3.0em;
+    }
+
 .element {
-    margin-top:1em;
+    margin-top: 1em;
 }
 

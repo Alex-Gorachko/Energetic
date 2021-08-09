@@ -33,24 +33,22 @@
     margin-bottom: 3em;
 }
 
-.player_photo {
-    
-    margin-bottom: 7em;
-    justify-content: center;
-    justify-items: center;
-    width: 400px;
-    height: 850px;
-    margin-left:5em;
-    margin-right: 20em;
+
+.image {
+    position: relative;
+    overflow: hidden;
+    width: 600px;
+    height: 600px;
+    margin-right: 2em;
 }
 
-    . player_photo img {
-        position: absolute;
+    .image img {
+        position: relative;
+        height: 100%;
         z-index: 1;
         top: 50%;
         left: 50%;
         transform: translate3d(-50%,-50%,0);
-        
     }
 
 .player_info {

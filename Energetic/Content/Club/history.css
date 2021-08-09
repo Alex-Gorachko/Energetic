@@ -1,8 +1,3 @@
-
-
-
-/*----------FUULNAME-------------*/
-
 .container {
     position: absolute;
     margin-top: 150px;
@@ -17,15 +12,11 @@
     
 }
 
-
-/*----------LISTCONTENT-------------*/
 .elements {
     width: 100%;
     margin-top: 300px;
 }
 
-
-/*----------WORKPLACE-------------*/
 #years {
     position: relative;
     width: 100%;

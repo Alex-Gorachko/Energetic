@@ -6,6 +6,7 @@ const menu_statistic = document.getElementById("menu_statistic")
 const header_statistic = document.getElementById("header_statistic")
 const menu_multimedia = document.getElementById("menu_multi")
 const header_multimedia = document.getElementById("header_multi")
+const footer = document.getElementById("footer")
 
 function club_start() {
     header_club.onmouseover = () => {
@@ -26,6 +27,8 @@ function club_start() {
         header_club.fontSize = "1.5em";
 
     }
+
+    
 
 }
 function team_start() {

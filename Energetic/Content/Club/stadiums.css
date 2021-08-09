@@ -1,7 +1,4 @@
 
-
-/*----------FUULNAME-------------*/
-
 .container{
     position:absolute;
     margin-top: 150px;
@@ -14,13 +11,11 @@
     text-align: center;
 }
 
-/*----------LISTCONTENT-------------*/
 .elements{
     width: 100%;
     margin-top: 300px ;
 }
 
-/*----------WORKPLACE-------------*/
 .element {
     padding: 20px 20px;
     width: 100%;
@@ -32,38 +27,39 @@
 .url{
     padding: 20px;
 }
+
 #stadiums{
     width:100%;
     height: auto;
+    margin-bottom:5em;
 }
+
 .stadium {
     display: flex;
-    margin-bottom: 4em;
     align-items: center;
-    margin-left: 6.0em;
     font-weight: bolder;
+    color: #0E0354;
+    padding: 1em 1em;
+    margin: 1em 0em 1em 0em;
+    
 }
+
 .text p {
     font-style: normal;
     font-weight: normal;
     margin-top: 1.2em;
     font-size: 36px;
-    color: #0E0354;
 }
+
 .text {
     align-items: center;
 }
 
-#stadium{
-
-    display: flex;
-  
-    flex-wrap: wrap;
-}
 .stadiums{
     margin-bottom:9em;
     margin-right:9em;
 }
+
 .image{
    
     position: relative;
@@ -72,16 +68,18 @@
     height:300px;
     margin-left:1em;
     margin-right:2em;
-    margin-bottom:4em;
+    
 }
+
 .img{
-    position:absolute;
+    position:relative;
     z-index:1;
     top:50%;
     left:50%;
     transform:translate3d(-50%,-50%,0);
 
 }
+
 .hidden{
     position:absolute;
     bottom:0;
@@ -93,6 +91,7 @@
     width:100%;
     height:100%;
 }
+
 .hidden_item{
     position:relative;
     width: 289px;
@@ -108,6 +107,7 @@
 
 
 }
+
 .hidden_item p{
     font-style: normal;
     font-weight: normal;
@@ -116,11 +116,13 @@
     margin-top:1.5em;
     color:#FFFFFF;
 }
+
 .image:hover .hidden_item{
     display: block;
     transition:7s ease-in-out;
 
 }
+
 .image:hover .hidden{
     background-color:rgba(0,0,0,.5);
 }
