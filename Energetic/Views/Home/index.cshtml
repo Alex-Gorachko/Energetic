@@ -33,30 +33,44 @@
             <section class="row matches_main">
 
                 <section class="col-12 col-md-12 col-sm-12 col-lg-6 matches" id="first_match">
-                    <section class="matches_header"> <p>Прошлый матч</p></section>
+                    <section class="matches_header"> <p>@Model.Match.last.Tur</p></section>
                     <section class="matches-item">
-                        <p class="tour">тур 10</p>
-                        <div class="teams">
-                            <p class="first_team">Энергетик</p>
-                            <p class="second_team">Виктория</p>
+
+                        @if (Model.Match.next.Tur == "1 тур")
+                        {
+                            <style>
+                                .free {
+                                    color:#0E0354;
+                                }
+                                    .free:hover {
+                                        color: #0B0340;
+                                    }
+                            </style>
+                            
+                        }
+
+
+                        <div class="row teams">
+                            <p class="col-6 col-md-6 col-sm-6 col-lg-6 free">@Model.Match.last.FirstTeam</p>
+                            <p class="col-6 col-md-6 col-sm-6 col-lg-6 free">@Model.Match.last.SecondTeam</p>
                         </div>
-                        <p class="score">4:2</p>
-                        <p class="date">03.07.2021</p>
-                        <p class="city">Минск</p>
+                        <p class="score free">@Model.Match.last.Score</p>
+                        <p class="date free">@Model.Match.last.Date</p>
+
 
                     </section>
                 </section>
                 <section class="col-12 col-md-12 col-sm-12 col-lg-6 matches" id="second_match">
-                    <section class="matches_header"><p>Следующий матч</p></section>
+                    <section class="matches_header"><p>@Model.Match.next.Tur</p></section>
                     <section class="matches-item">
-                        <p class="tour">тур 11</p>
-                        <div class="teams">
-                            <p class="first_team">Энергетик</p>
-                            <p class="second_team">Спартак</p>
+                        
+                        <div class="row teams">
+                            <p  class="col-6 col-md-6 col-sm-6 col-lg-6 ">@Model.Match.next.FirstTeam</p>
+                            <p  class="col-6 col-md-6 col-sm-6 col-lg-6 ">@Model.Match.next.SecondTeam</p>
                         </div>
-                        <p class="score">VS</p>
-                        <p class="date">11.07.2021</p>
-                        <p class="city">Минск</p>
+                        <p  class="score">@Model.Match.next.Score</p>
+                        <p  class="date">@Model.Match.next.Date</p>
+
 
                     </section>
 
@@ -66,7 +80,7 @@
 
                 @foreach (var el in Model.Cubs)
                 {
-                    <section class="col-4 col-lg-4 col-4 col-sm-4 col-md-4 trophy">
+                    <section class="col-12 col-lg-4 col-4 col-sm-12 col-md-12 trophy">
                         <section class="trophy_img">
                             <img src="~/Images/кубок 4.png" max-height="200" max-width="208" />
                         </section>
@@ -105,21 +119,23 @@
                     </section>
                 </section>
 
-                @for (int i = 0; i < 10; i++)
+                @foreach (var el in Model.Table)
                 {
+
                 <section class="element">
                     <section class="row">
-                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 "></section>
-                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">1</section>
-                        <section class="col-lg-2 col-sm-2 col-md-2 col-2 ">Энергетик</section>
-                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">11</section>
-                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">13</section>
-                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">3</section>
-                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">8</section>
-                        <section class="col-lg-2 col-sm-2 col-md-2 col-2 ">13-19</section>
-                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">13</section>
+                        <section class="col-lg-1 col-sm-0 col-md-0 col-0 "></section>
+                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">@el.position</section>
+                        <section class="col-lg-2 col-sm-3 col-md-3 col-3 ">@el.team</section>
+                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">@el.playes</section>
+                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">@el.win</section>
+                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">@el.draw</section>
+                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">@el.loose</section>
+                        <section class="col-lg-2 col-sm-2 col-md-2 col-2 ">@el.balls</section>
+                        <section class="col-lg-1 col-sm-1 col-md-1 col-1 ">@el.points</section>
                     </section>
                 </section>
+
                 }
 
 

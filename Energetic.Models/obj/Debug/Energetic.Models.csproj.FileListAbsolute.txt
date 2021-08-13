@@ -9,3 +9,9 @@ C:\Users\bbaat\Desktop\Energetic\Energetic.Models\obj\Debug\Energetic.Models.csp
 C:\Users\bbaat\Desktop\Energetic\Energetic.Models\obj\Debug\Energetic.Models.dll
 C:\Users\bbaat\Desktop\Energetic\Energetic.Models\obj\Debug\Energetic.Models.pdb
 C:\Users\bbaat\Desktop\Energetic\Energetic.Models\obj\Debug\Energetic.Models.csprojAssemblyReference.cache
+C:\Users\bbaat\Desktop\EnergeticSyte\Energetic.Models\bin\Debug\Energetic.Models.dll
+C:\Users\bbaat\Desktop\EnergeticSyte\Energetic.Models\bin\Debug\Energetic.Models.pdb
+C:\Users\bbaat\Desktop\EnergeticSyte\Energetic.Models\obj\Debug\Energetic.Models.csprojAssemblyReference.cache
+C:\Users\bbaat\Desktop\EnergeticSyte\Energetic.Models\obj\Debug\Energetic.Models.csproj.CoreCompileInputs.cache
+C:\Users\bbaat\Desktop\EnergeticSyte\Energetic.Models\obj\Debug\Energetic.Models.dll
+C:\Users\bbaat\Desktop\EnergeticSyte\Energetic.Models\obj\Debug\Energetic.Models.pdb

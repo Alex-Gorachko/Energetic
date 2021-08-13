@@ -29,8 +29,12 @@ namespace Energetic.Controllers
             Index index = new Index
             {
                 Photo = _dataService.GetMainPhotoUsualInformationByID(2),
-                Cubs = _dataService.GetCub()
+                Cubs = _dataService.GetCub(),
+                Table = _dataService.GetTable(),
+                Match = _dataService.GetMatches()
+
             };
+
             return View("index", index);
         }
 

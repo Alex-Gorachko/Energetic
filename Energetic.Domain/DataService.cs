@@ -4,14 +4,18 @@ using Energetic.Models.Club.Cubs;
 using Energetic.Models.Club.Gallery;
 using Energetic.Models.Club.History;
 using Energetic.Models.Club.MainPhotoUsualInformations;
+using Energetic.Models.Club.Matchs;
 using Energetic.Models.Club.Personal;
 using Energetic.Models.Club.Players;
 using Energetic.Models.Club.Stadium;
+using Energetic.Models.Club.Table;
 using Energetic.Models.Club.Team;
 using Energetic.Models.Club.Video;
 using Energetic.Repository;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Text;
 
 namespace Energetic.Domain
 {
@@ -37,8 +41,11 @@ namespace Energetic.Domain
         ///     Получение списка контактов
         /// </summary>
         /// <returns></returns>
+        Match ParseMatch(string url);
         List<Contact> GetContacts(int type);
         List<Cub> GetCub();
+        List<TurnamentTable> GetTable();
+        Matches GetMatches();
         List<Album> GetAlbum();
         List<IGrouping<int, Turnament>> GetHistory();
         List<Turnament> GetTurnament();
@@ -53,9 +60,9 @@ namespace Energetic.Domain
     }
 
     public class DataService : IDataService
+
     {
         private readonly IDataProvider _dataProvider;
-
         public DataService(IDataProvider dataProvider)
         {
             _dataProvider = dataProvider;
@@ -72,6 +79,150 @@ namespace Energetic.Domain
             return _dataProvider.Contacts.Filter(obj => obj.Type == type).ToList();
 
 
+        }
+
+        public Match ParseMatch(string url)
+        {
+            WebClient web1 = new WebClient();
+
+            url = Encoding.UTF8.GetString(web1.DownloadData(url));
+
+
+            Match match = new Match { };
+
+            url = url.Substring(url.IndexOf("table score-table"));
+            url = url.Substring(url.IndexOf("<td"));
+            url = url.Substring(url.IndexOf(">") + 1);
+            match.Tur = url.Substring(0, url.IndexOf("</td"));
+
+
+            for (int i = 0; i < 5; i++)
+            {
+                url = url.Substring(url.IndexOf("<td") + 4);
+                match.FirstTeam = url.Substring(0, url.IndexOf("</td>"));
+                url = url.Substring(url.IndexOf("<td") + 4);
+                url = url.Substring(url.IndexOf("<td") + 4);
+                match.Score = url.Substring(0, url.IndexOf("<div"));
+                url = url.Substring(url.IndexOf(">") + 1);
+                match.Date = url.Substring(0, url.IndexOf("</div"));
+                url = url.Substring(url.IndexOf("<td") + 4);
+                url = url.Substring(url.IndexOf("<td") + 4);
+                match.SecondTeam = url.Substring(0, url.IndexOf("</td>"));
+
+                if (match.FirstTeam == "Энергетик-БГАТУ" || match.SecondTeam == "Энергетик-БГАТУ")
+                {
+                    break;
+                }
+                url = url.Substring(url.IndexOf("<tr") + 1);
+                
+
+            }
+
+
+            return match;
+        }
+        public Matches GetMatches() {
+
+            var matches = new Matches { };
+
+            WebClient web1 = new WebClient();
+            string data = Encoding.UTF8.GetString(web1.DownloadData("https://championship.abff.by/male/tournaments/1/?tournamentId=69&childTournament=94"));
+
+            data = data.Substring(data.IndexOf("common-tabs-menu"));
+            data = data.Substring(data.IndexOf("hidden-mobile")+1);
+            data = data.Substring(data.IndexOf("hidden-mobile"));
+            data = data.Substring(data.IndexOf("href")+6);
+            string url = data.Substring(0, data.IndexOf("="));
+            
+
+            data= "https://championship.abff.by"+url+"=94";
+
+            matches.next = ParseMatch(data);
+
+
+            if (matches.next.Tur == "1 тур") {
+                matches.last = new Match
+                {
+                    FirstTeam = ".",
+                    Tur = "Прошлый матч отсутствует",
+                    SecondTeam = ".",
+                    Score = ".",
+                    Date = "."
+                };
+            }
+            else {
+                
+               data = data.Replace("1", ((int.Parse(matches.next.Tur.Substring(0, matches.next.Tur.IndexOf(" тур")))) -1).ToString()); 
+                data += "&match=1";
+                matches.last = ParseMatch(data);
+            }
+            
+            return matches;
+        }
+
+        public List<TurnamentTable> GetTable()
+        {
+            List<TurnamentTable> Table = new List<TurnamentTable> { };
+            WebClient web1 = new WebClient();
+
+            string turnamentTable = Encoding.UTF8.GetString( web1.DownloadData("https://championship.abff.by/male/tournaments/1/?tournamentId=69&childTournament=94"));
+
+            turnamentTable = turnamentTable.Substring(turnamentTable.IndexOf("tab-content active"));
+            turnamentTable = turnamentTable.Substring(turnamentTable.IndexOf("<tbody>") + 7);
+            turnamentTable = turnamentTable.Substring(0, turnamentTable.IndexOf("</tbody>"));
+
+            int i = 0;
+            int x = -1;
+            int count = -1;
+            while (i != -1)
+            {
+                i = turnamentTable.IndexOf("<tr>", x + 1);
+                x = i;
+                count++;
+            }
+
+            turnamentTable = turnamentTable.Substring(turnamentTable.IndexOf("tr")+3);
+            turnamentTable = turnamentTable.Substring(turnamentTable.IndexOf("tr")+3);
+
+            for (int ii = 0; ii < count; ii++)
+            {
+                string[] mass = new string[8];
+                turnamentTable = turnamentTable.Substring(turnamentTable.IndexOf("<td") + 4);
+                mass[0]= turnamentTable.Substring(0, turnamentTable.IndexOf("</td>"));
+
+                turnamentTable = turnamentTable.Substring(turnamentTable.IndexOf("<td") + 4);
+                turnamentTable = turnamentTable.Substring(turnamentTable.IndexOf("<td") + 4);
+                turnamentTable = turnamentTable.Substring(turnamentTable.IndexOf(">") + 1);
+                mass[1] = turnamentTable.Substring(0, turnamentTable.IndexOf("</a>"));
+
+                turnamentTable = turnamentTable.Substring(turnamentTable.IndexOf("<td") + 4);
+                mass[2] = turnamentTable.Substring(0, turnamentTable.IndexOf("</td>"));
+
+                turnamentTable = turnamentTable.Substring(turnamentTable.IndexOf("<td") + 4);
+                turnamentTable = turnamentTable.Substring(turnamentTable.IndexOf(">") + 1);
+                mass[3] = turnamentTable.Substring(0, turnamentTable.IndexOf("</td>"));
+
+                turnamentTable = turnamentTable.Substring(turnamentTable.IndexOf("<td") + 4);
+                turnamentTable = turnamentTable.Substring(turnamentTable.IndexOf(">") + 1);
+                mass[4] = turnamentTable.Substring(0, turnamentTable.IndexOf("</td>"));
+
+                turnamentTable = turnamentTable.Substring(turnamentTable.IndexOf("<td") + 4);
+                turnamentTable = turnamentTable.Substring(turnamentTable.IndexOf(">") + 1);
+                mass[5] = turnamentTable.Substring(0, turnamentTable.IndexOf("</td>"));
+
+                turnamentTable = turnamentTable.Substring(turnamentTable.IndexOf("<td") + 4);
+                turnamentTable = turnamentTable.Substring(turnamentTable.IndexOf(">") + 1);
+                mass[6] = turnamentTable.Substring(0, turnamentTable.IndexOf("</td>"));
+
+                turnamentTable = turnamentTable.Substring(turnamentTable.IndexOf("<td") + 4);
+                mass[7] = turnamentTable.Substring(0, turnamentTable.IndexOf("</td>"));
+
+                turnamentTable = turnamentTable.Substring(turnamentTable.IndexOf("<tr") + 4);
+                Table.Add(new TurnamentTable { position = mass[0], team = mass[1], playes = mass[2], win = mass[3], draw = mass[4], loose = mass[5], balls = mass[6], points = mass[7] });
+            
+            }
+
+            return Table;
         }
         /*------------------------------------------------------*/
         public Cub GetCubByID(int id) => _dataProvider.Cubs.GetById(id);

@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Club\Gallery\Photo.cs" />
     <Compile Include="Club\Index\Index.cs" />
+    <Compile Include="Club\Match\Match.cs" />
+    <Compile Include="Club\Match\Matches.cs" />
     <Compile Include="Club\Players\ActiveTeam.cs" />
     <Compile Include="Club\Contacts\Contact.cs" />
     <Compile Include="Club\Cubs\Cub.cs" />
@@ -54,6 +56,7 @@
     <Compile Include="Club\Personal\Personal.cs" />
     <Compile Include="Club\Players\Player.cs" />
     <Compile Include="Club\Stadium\Stadium.cs" />
+    <Compile Include="Club\Table\TurnamentTable.cs" />
     <Compile Include="Club\Team\Team.cs" />
     <Compile Include="Club\Video\Video.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

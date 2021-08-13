@@ -21,9 +21,11 @@ body {
     text-decoration: none;
 }
 
-.menu_link a  {
+.menu_link a {
     text-decoration: none;
+    font-size: 1.4em;
 }
+
 /*----------------------*/
 #content {
     flex: 1 0 auto;
@@ -36,7 +38,7 @@ margin-bottom: 10px;
 
 a {
     color: #FFFFFF !important;
-    font-size: 1.4em;
+    
     transition: ease 10ms;
     cursor: pointer;
 }
