@@ -84,7 +84,7 @@ a {
     top: 1.0em;
     width: 100%;
     height: auto;
-    margin-left: 10px;
+    padding-left:20px;
 }
 
 .matches {
@@ -178,7 +178,7 @@ a {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    
     padding-bottom: 1em;
     padding-top: 1em;
     top: 6.0em;
@@ -190,7 +190,7 @@ a {
         position: relative;
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
+        
         padding-bottom: 1em;
         padding-top: 1em;
         top: 6.0em;
@@ -206,7 +206,6 @@ a {
 .trophy_section {
     position: relative;
     top: 2.5em;
-    
 }
 
 .name {

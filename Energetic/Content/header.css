@@ -10,7 +10,7 @@ body.html {
 body {
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
-    margin: 0;
+    margin: 0px;
     background: #EBEEFF;
 }
 
@@ -29,7 +29,7 @@ body {
 /*----------------------*/
 #content {
     flex: 1 0 auto;
-    width: 100%;
+    margin: 0px 0px;
 }
 
 .logo {
@@ -86,7 +86,7 @@ a {
 .menu_header {
     font-size: 1.5em;
     font-style: normal;
-    padding-bottom: 1.25em;
+    padding-bottom: 1.27em;
     color: #EDEBEB;
     font-weight: normal;
 }
@@ -123,5 +123,4 @@ a {
     height:50px;
 }
 
-/*------FOOTER----------*/
 
