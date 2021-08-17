@@ -1,8 +1,8 @@
 .container {
     position: absolute;
-    margin-top: 150px;
+    margin-top: 250px;
     width: 100%;
-    padding: 30px;
+   
 }
 
 .fullName {
@@ -13,7 +13,7 @@
 
 .elements{
     width: 100%;
-    margin-top: 300px ;
+    margin-top: 400px ;
 }
 
 .url {
@@ -51,6 +51,26 @@
         align-items: center;
     }
 
-
+@media (max-width:765px) {
+    .text {
+        display: flex;
+        flex-wrap:wrap;
+        align-items: center;
+        margin-bottom: 5em;
+        margin-left: 0em;
+    }
+        .text h3 {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 2em;
+            color: #0E0354;
+            align-items: center;
+            margin-left: 10px;
+        }
+    .url {
+        padding: 0px;
+    }
+    
+}
 
 

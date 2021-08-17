@@ -23,7 +23,7 @@ body {
 
 .menu_link a {
     text-decoration: none;
-    font-size: 1.4em;
+   
 }
 
 /*----------------------*/
@@ -32,8 +32,13 @@ body {
     margin: 0px 0px;
 }
 
-.logo {
-margin-bottom: 10px;
+
+
+.logo img {
+    position:absolute;
+    margin-bottom: 10px;
+    height:120px;
+    width:150px;
 }
 
 a {
@@ -48,7 +53,7 @@ a {
     color: #FFFFFF !important;
 
     color: white;
-    font-size: 1.6em;
+    
     transition: ease 10ms;
     cursor: pointer;
 }
@@ -57,44 +62,74 @@ a {
     color: #FFFFFF !important;
     color: white;
     transition: ease 10ms;
-    font-size: 1.6em;
     cursor: pointer;
 }
 
 #header {
     position: fixed;
     width: 100%;
-    height: 130px;
+    padding-bottom:2em;
     left: 0px;
     top: 0px;
     overflow: visible;
     z-index: 3;
     background: #0E0354;
     border-bottom: #EBEEFF solid 0.3em;
+    font-size:1.49em;
+    
 }
+
+@media (max-width:900px) {
+    .menu {
+        
+        font-size: 0.8em;
+    }
+    
+
+    #b_exit img {
+       
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+    }
+
+    .menu_item {
+        font-size: 0.7em;
+        
+        z-index: 1000;
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        background: #0E0354;
+    }
+}
+
+
+
+
 
 .menu {
     padding-top: 2.4em;
     font-style: normal;
     font-weight: normal;
-    font-size: 1.2em;
+    
     align-items: center;
     text-align: center;
     color: #EDEBEB;
 }
 
 .menu_header {
-    font-size: 1.5em;
     font-style: normal;
     padding-bottom: 1.27em;
     color: #EDEBEB;
     font-weight: normal;
+
 }
 
+
+
 .menu_item {
-    
-    border: #EBEEFF solid 0.3em;
-    border-top: none !important;
     z-index: 1000;
     width: auto;
     flex-direction: column;
@@ -102,6 +137,7 @@ a {
     display: none;
     background: #0E0354;
 }
+
 
 .menu_link {
     text-decoration: none !important;
@@ -111,16 +147,19 @@ a {
 }
 
     .menu_link span {
-        font-size: 1.2em;
+        
         text-decoration: none;
         color: #FFFFFF;
     }
 
 #b_exit {
-    margin: 40px 0px 0px 50px;
+    margin-top:1.5em;
+    margin-left:1em;
     cursor: pointer;
     width:50px;
     height:50px;
 }
+
+
 
 

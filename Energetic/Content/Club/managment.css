@@ -1,6 +1,6 @@
 .container {
     position: absolute;
-    margin-top: 150px;
+    margin-top: 220px;
     width: 100%;
     padding: 30px;
 }
@@ -13,7 +13,7 @@
 
 .elements {
     width: 100%;
-    margin-top: 500px;
+    margin-top: 300px;
 }
 
 .item {
@@ -54,13 +54,13 @@
     margin-top:1em;
     position: relative;
     overflow: hidden;
-    width: 400px;
-    height: 400px;
-    margin-left: 2em;
+    width: 360px;
+    height: 360px;
+    
     margin-right: 2em;
     margin-bottom: 2em;
  left:50%;
- margin-left:-200px;
+ margin-left:-180px;
 }
 
     .image img {
@@ -82,5 +82,9 @@
 }
 
 .url {
-    padding: 20px;
+    padding: 0px;
+}
+.row {
+    padding: 0px !important;
+    margin: 0px !important;
 }

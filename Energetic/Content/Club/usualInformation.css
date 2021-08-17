@@ -1,6 +1,6 @@
 .container{
     position:absolute;
-    margin-top: 150px;
+    margin-top: 230px;
     width: 100%;
     padding: 30px;
 }
@@ -14,13 +14,13 @@
 .elements {
    
     width: 100%;
-    margin-top: 300px;
+    margin-top: 400px;
 }
 
 .info {
     justify-content: center;
     align-items: center;
-    padding: 0px 150px;
+   
 }
 
 .text p {
@@ -29,27 +29,42 @@
     font-size: 2.2em;
     padding: 0px 50px;
     color: #0E0354;
-    font-weight:bolder;
+    font-weight: bolder;
     
 }
-
-.text{
-    position:relative;
-    width:100%;
-    height: auto;
-
+@media (max-width:765px) {
+    .text p {
+        font-family: Roboto;
+        font-style: normal;
+        font-size: 1.2em;
+        padding:5px;
+        color: #0E0354;
+        font-weight: bolder;
+    }
+    .photoL img {
+        width: 500px;
+    }
 }
 
-.photo {
-    position:relative;
+    .text {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
 
-    width:100%;
-}
+    .photo {
+        position: relative;
+        
+    }
 
 .photoL {
     justify-content: center;
     overflow: hidden;
     position: relative;
-   text-align:center;
-   margin:1em;
+    text-align: center;
+    margin: 1em;
+    
 }
+    .photoL img {
+        width: 2000px;
+    }

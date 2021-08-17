@@ -1,6 +1,6 @@
 .container {
     position: absolute;
-    margin-top: 150px;
+    margin-top: 220px;
     padding: 30px;
     width: 100%;
 }
@@ -14,7 +14,7 @@
 
 .elements {
     width: 100%;
-    margin-top: 300px;
+    margin-top: 350px;
 }
 
 #years {
@@ -26,6 +26,7 @@
 .main_name {
     margin-bottom: 1em;
     color: #0E0354;
+    margin-right:0px;
 }
 
 .year {
@@ -66,4 +67,33 @@
 .info {
     margin-bottom: 2em;
     margin-left: 3em;
+}
+
+@media(max-width:765px) {
+    .year {
+        margin-bottom: 1em;
+        padding: 0px 15px 15px 0px;
+        margin-top: 3em;
+        padding-top: 0px !important;
+        width: 100%;
+    }
+    .cup_item_name {
+        margin-right: 0.0em;
+    }
+
+        .cup_item_name p,
+        .cup_item_value p {
+            margin-bottom: 0.5em;
+            margin-left: 0.2em;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: normal;
+            color: #14056C;
+        }
+    .info {
+        margin-bottom: 2em;
+        margin-left: 1em;
+    }
+    
+
 }
